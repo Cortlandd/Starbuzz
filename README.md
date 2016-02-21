@@ -1,3 +1,15 @@
+## Rebuilt in Kotlin-Lang.
+# Was getting error:
+> ava.lang.RuntimeException: Unable to instantiate activity ComponentInfo{com.hfad.starbuzz/com.hfad.starbuzz.TopLevelActivity}: java.lang.ClassNotFoundException: Didn't find class "com.hfad.starbuzz.TopLevelActivity" on path: DexPathList[[zip file "/data/app/com.hfad.starbuzz-4.apk"],nativeLibraryDirectories=[/data/app-lib/com.hfad.starbuzz-4, /vendor/lib, /system/lib]]
+
+# Fix (it was 'src/main/kotlin')
+> inside grade:
+> sourceSets {
+>
+>  main.java.srcDirs += 'src/main/java'
+>
+>}
+
 ## What happens when you run the app
 
 1. ***When the user starts the app, it launches TopLevelActivity.***
