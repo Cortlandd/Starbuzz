@@ -1,14 +1,9 @@
 package com.hfad.starbuzz
 
 
-class Drink// each drink has a name, description, and image resource
-private constructor(// Each Drink is composed of a name, description, and image resource ID
-        val name: String, // getters
-        val description: String, val imageResourceId: Int) {
-
-    override fun toString(): String {
-        return this.name
-    }
+class Drink
+// Each Drink is composed of a name, description, and image resource ID
+private constructor(val name: String, val description: String, val imageResourceId: Int) {
 
     companion object {
 
@@ -18,4 +13,5 @@ private constructor(// Each Drink is composed of a name, description, and image 
                 R.drawable.cappuccino), Drink("Filter", "Highest quality beans roasted and brewed fresh",
                 R.drawable.filter))
     }
+
 }
